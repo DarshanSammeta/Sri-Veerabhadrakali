@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sri Veerabhadrakali Temple
 
 Reference-inspired multi-page temple website built with React 19, TanStack Start, TypeScript, Vite and Tailwind CSS. No proprietary runtime SDK, database, authentication, payments or CMS is required.
@@ -71,3 +72,6 @@ The router regenerates `src/routeTree.gen.ts`; do not edit it manually. `news_.$
 ## Content maintenance
 
 Edit the typed content modules rather than duplicating contact values in pages. Unconfirmed facts remain null. Do not populate dates, prices, contact details or history without administration approval. Central content imports can later be replaced by a CMS data adapter; no CMS exists today. Images are representative, not verified photographs of this temple.
+=======
+# -Sri-Veerabhadrakali
+>>>>>>> 7c4562653972f46f80f128e10ee7ea3b1e14122a
