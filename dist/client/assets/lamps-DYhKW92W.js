@@ -1,0 +1,1 @@
+var e=`/assets/lamps-Da3ZRqnz.jpg`;export{e as t};

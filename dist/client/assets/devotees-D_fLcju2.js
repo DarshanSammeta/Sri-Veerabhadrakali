@@ -1,0 +1,1 @@
+var e=`/assets/devotees-jDys92-N.jpg`;export{e as t};

@@ -1,0 +1,117 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-forest: var(--forest);
+  --color-forest-foreground: var(--forest-foreground);
+  --color-saffron: var(--saffron);
+  --color-peach: var(--peach);
+  --color-ivory: var(--ivory);
+  --color-cream: var(--cream);
+}
+
+:root {
+  --radius: 1rem;
+  --background: oklch(0.995 0.006 85);      /* #FFFDF8 ivory */
+  --ivory: oklch(0.995 0.006 85);
+  --foreground: oklch(0.27 0.008 50);       /* #292522 */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.27 0.008 50);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.27 0.008 50);
+  --primary: oklch(0.64 0.2 37);            /* #F4511E */
+  --primary-foreground: oklch(1 0 0);
+  --saffron: oklch(0.7 0.2 47);             /* #FF6D00 */
+  --secondary: oklch(0.97 0.022 50);        /* #FFF0E8 peach */
+  --peach: oklch(0.97 0.022 50);
+  --cream: oklch(0.975 0.015 75);
+  --secondary-foreground: oklch(0.27 0.008 50);
+  --muted: oklch(0.97 0.012 70);
+  --muted-foreground: oklch(0.53 0.012 55);  /* #756E68 */
+  --accent: oklch(0.97 0.022 50);
+  --accent-foreground: oklch(0.27 0.008 50);
+  --forest: oklch(0.31 0.045 170);          /* #123B32 */
+  --forest-foreground: oklch(0.97 0.015 85);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.92 0.015 60);
+  --input: oklch(0.92 0.015 60);
+  --ring: oklch(0.64 0.2 37);
+  --shadow-soft: 0 18px 40px -22px oklch(0.27 0.03 40 / 0.35);
+  --shadow-card: 0 10px 30px -18px oklch(0.27 0.03 40 / 0.28);
+  --overlay-dark: linear-gradient(90deg, oklch(0.15 0.03 170 / 0.85), oklch(0.15 0.03 170 / 0.35));
+  --gradient-orange: linear-gradient(120deg, var(--primary), var(--saffron));
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; letter-spacing: 0; overflow-wrap: break-word; }
+  section[id] { scroll-margin-top: 80px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+}
+
+@utility eyebrow {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font-size: .75rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--color-primary);
+}
+@utility shadow-soft { box-shadow: var(--shadow-soft); }
+@utility shadow-card { box-shadow: var(--shadow-card); }
+@utility bg-overlay-dark { background-image: var(--overlay-dark); }
+@utility bg-gradient-orange { background-image: var(--gradient-orange); }
+@utility curve-top {
+  border-top-left-radius: 50% 3.5rem;
+  border-top-right-radius: 50% 3.5rem;
+}
+@utility curve-bottom {
+  border-bottom-left-radius: 50% 3.5rem;
+  border-bottom-right-radius: 50% 3.5rem;
+}
+@utility reveal {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity .8s ease, transform .8s ease;
+  &.is-visible { opacity: 1; transform: none; }
+}
+@utility ken-burns { animation: kenburns 24s ease-in-out infinite alternate; }
+
+@keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.08); } }

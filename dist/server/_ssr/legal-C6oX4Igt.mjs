@@ -1,0 +1,47 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/legal-C6oX4Igt.js
+var privacySections = [
+	{
+		title: "About this notice",
+		text: "This draft describes the current informational website. The operator’s legal identity and official privacy contact are awaiting confirmation. Temple administration must review this notice before publication."
+	},
+	{
+		title: "Information you provide",
+		text: "This website has no account registration, payment service or contact submission form. It does not request personal information through those features."
+	},
+	{
+		title: "Hosting and external services",
+		text: "The hosting provider may process standard request information such as IP addresses and browser details. Fonts are requested from Google Fonts. If a verified location is added, an embedded Google map may contact Google. Those providers apply their own privacy policies."
+	},
+	{
+		title: "Cookies and storage",
+		text: "The temple website does not implement tracking cookies, analytics or persistent visitor profiles. Independently configured hosting services should be reviewed for any additional processing before launch."
+	},
+	{
+		title: "Questions and changes",
+		text: "Official privacy contact details, applicable jurisdiction and an approval date are awaiting confirmation. This notice must be updated if data collection or external services change."
+	}
+];
+var termsSections = [
+	{
+		title: "Informational use",
+		text: "This website provides general temple information. Unverified timings, location details and programmes are clearly marked. Confirm arrangements with the temple administration before making travel plans."
+	},
+	{
+		title: "No booking or payment service",
+		text: "The website does not offer online booking, paid darshan, payments or guaranteed availability of sevas. Descriptions do not constitute a confirmed service offer."
+	},
+	{
+		title: "Images and content",
+		text: "Current imagery is representative and is not documentary evidence of this temple. Authorised temple photographs and approved historical content are awaited. Rights and permissions must be checked before redistribution."
+	},
+	{
+		title: "External links",
+		text: "Directions and other external resources, when enabled, are provided for convenience. External providers are responsible for their services and policies."
+	},
+	{
+		title: "Approval and applicable law",
+		text: "These are draft website terms, not a substitute for legal review. Operator details, applicable jurisdiction, official contact and effective date require administrator confirmation."
+	}
+];
+//#endregion
+export { termsSections as n, privacySections as t };

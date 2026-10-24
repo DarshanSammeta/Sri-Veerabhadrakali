@@ -1,0 +1,1 @@
+import{s as e,t}from"./link-C9Z9Tb6I.js";var n=e(),r=()=>(0,n.jsxs)(`div`,{className:`px-5 pt-32 pb-20 text-center`,children:[(0,n.jsx)(`h1`,{className:`text-4xl`,children:`Announcement not found`}),(0,n.jsx)(t,{to:`/news`,className:`mt-6 inline-block text-primary`,children:`All announcements`})]});export{r as notFoundComponent};
