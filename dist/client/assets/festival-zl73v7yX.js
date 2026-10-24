@@ -1,1 +1,0 @@
-var e=`/assets/festival-Rnpe37_W.jpg`;export{e as t};

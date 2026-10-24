@@ -1,1 +1,0 @@
-var e=`/assets/heritage-QA6Kukl_.jpg`;export{e as t};
